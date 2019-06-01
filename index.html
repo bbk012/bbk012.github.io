@@ -1,0 +1,273 @@
+<!-- THIS IS TEMPLATE OF HTML PAGE WITH VARIOUS ADDITIONAL EXPLANATIONS
+
+TYPICAL HTML PAGE STRUCTURE IS:
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Template 	Page Title</title>
+</head>
+
+<body>
+
+<h1>This is a Heading</h1>
+
+<p>This is paragraph <br> with line break</p>
+
+</body>
+</html>
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My Template 	Page Title</title>
+
+    <!-- Example of external CSS -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<h1 id="C1">This is a Heading</h1>
+
+<!-- Example paragraf with  so name inline style atribute -->
+<p style="color:red; font-size:160%; font-family:courier; text-align:center;"> This is a paragraph.</p>
+
+<p>This is another &lt paragraph <br> with line break</p>
+
+<hr> 
+
+<a href="https://www.w3schools.com">This is a link</a>
+
+<!-- Line break - does not have end tag -->
+<br>
+
+<img src="/images/html5.gif" alt="W3Schools.com" style="width:128px;height:128px;">
+
+<button>Click me</button>
+
+<input type="button" onclick="alert('Hello World!')" value="Click Me Too!">
+
+<!--List ul - unordered, ol - ordered -->
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+<script>
+document.getElementById("C1").innerHTML = "Hello JavaScript!";
+</script>
+
+<form action="http://wqfoo.com"  method="get">
+  First name:<br>
+  <input type="text" name="firstname" value="Mickey"><br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse"><br><br>
+  
+  <br>
+  
+  <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other
+  
+  <br>
+  <select name="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+</select>
+  
+  <br>
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
+
+<!-- ADDITIONAL HTML RELATED INFORMATIONS
+
+###################################################################
+Formatting elements were designed to display special types of text:
+
+<b> - Bold text
+<strong> - Important text
+<i> - Italic text
+<em> - Emphasized text
+<mark> - Marked text
+<small> - Small text
+<del> - Deleted text
+<ins> - Inserted text
+<sub> - Subscript text
+<sup> - Superscript text
+
+Example: <p>This is <sup>superscripted</sup> text.</p>
+
+###################################################################
+<div> Tag
+The <div> tag defines a division or a section in an HTML document.
+The <div> element is often used as a container for other HTML elements to style them with CSS
+or to perform certain tasks with JavaScript.
+Example: A section in a document that will have a light blue background color:
+
+<div style="background-color:lightblue">
+  <h3>This is a heading</h3>
+  <p>This is a paragraph.</p>
+</div>    
+
+###################################################################
+HTML Quotation and Citation Elements
+
+<abbr>	- Defines an abbreviation or acronym
+<address> -	Defines contact information for the author/owner of a document
+<bdo>	- Defines the text direction
+<blockquote> -	Defines a section that is quoted from another source
+<cite>	- Defines the title of a work
+<q>	- Defines a short inline quotation
+
+Example: <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+
+###################################################################
+HTML Styles - CSS
+
+<h1 style="color:blue;">This is a Blue Heading</h1> <- inline CSS
+
+<head>    <-  internal in head for single Web Page
+<style>
+body {background-color: powderblue;}
+h1   {color: blue; font-family: verdana; font-size: 300%;}
+p    {color: red;}
+</style>
+</head>
+
+<head>   <- external using .css file which includes styles definition for elements
+  <link rel="stylesheet" href="/html/styles.css">
+</head>
+
+###################################################################
+HTML Links
+
+<a> - element to define a link
+href - attribute to define the link address
+target - attribute to define where to open the linked document
+<img> - element (inside <a>) to use an image as a link
+id - attribute (id="value") to define bookmarks in a page
+href - attribute (href="#value") to link to the bookmark
+
+Example:
+<h2 id="C4">Chapter 4</h2> <- bookmark setup
+<a href="#C4">Jump to Chapter 4</a> <- ussage of the defined bookmark
+
+
+###################################################################
+IMAGE 
+
+<img> - element to define an image
+src - attribute to define the URL of the image
+alt - attribute to define an alternate text for an image, if it cannot be displayed
+width and height - HTML attributes to define the size of the image
+width and height - CSS properties to define the size of the image (alternatively)
+float - CSS property to let the image float on left or right side of the text
+<map> - element to define an image-map
+<area> - element to define the clickable areas in the image-map
+<img>'s - element usemap attribute to point to an image-map
+<picture> - element to show different images for different devices
+
+Example:
+<a href="default.asp">   <- image as a link
+  <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;border:0;">
+</a>
+
+###################################################################
+HTML Tables
+
+<table style="width:100%">
+  <tr>                      <- table row>
+    <th>Firstname</th>      <- table header
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>           <- table data cell
+    <td>Smith</td> 
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td> 
+    <td>94</td>
+  </tr>
+</table>
+
+###################################################################
+HTML Entities - to display reserved characters
+
+&entity_name; or &#entity_number;
+
+&lt; or &#60  <- display a less than sign
+&nbsp         <- non-breaking space
+
+	non-breaking space	&nbsp;	&#160;
+<	less than	&lt;	&#60;
+>	greater than	&gt;	&#62;
+&	ampersand	&amp;	&#38;
+"	double quotation mark	&quot;	&#34;
+'	single quotation mark (apostrophe)	&apos;	&#39;
+¢	cent	&cent;	&#162;
+£	pound	&pound;	&#163;
+¥	yen	&yen;	&#165;
+€	euro	&euro;	&#8364;
+©	copyright	&copy;	&#169;
+®	registered trademark	&reg;	&#174;
+
+###################################################################
+HTML Forms - used to collect user input
+
+<input type="submit"> defines a button for submitting the form data to a form-handler.
+The form-handler is typically a server page with a script for processing input data.
+The form-handler is specified in the form's action attribute.
+
+Here are the different input types you can use in HTML:
+
+<input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text">
+<input type="time">
+<input type="url">
+<input type="week">
+
+Example:
+
+<form action="/action_page.php">
+  First name:<br>
+  <input type="text" name="firstname" value="Mickey"><br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+-->
+
+
+
+
