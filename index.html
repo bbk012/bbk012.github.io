@@ -1,227 +1,146 @@
-<!-- THIS IS TEMPLATE OF HTML PAGE WITH VARIOUS ADDITIONAL EXPLANATIONS
-
-TYPICAL HTML PAGE STRUCTURE IS:
-
 <!DOCTYPE html>
-<html>
-
-<head>
-    <title>My Template 	Page Title</title>
-</head>
-
-<body>
-
-<h1>This is a Heading</h1>
-
-<p>This is paragraph <br> with line break</p>
-
-</body>
-</html>
-
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- temporary excluded by B.K.
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/css/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 -->
+<link rel="stylesheet" href="./css/w3.css">
+<link rel="stylesheet" href="./css/w3-theme-black.css">
 
-<!-- THIS IS TEMPLATE OF HTML PAGE WITH VARIOUS ADDITIONAL EXPLANATIONS -->
-
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>My Template 	Page Title</title>
-</head>
-
-<body>
-
-<h1>This is a Heading</h1>
-
-<p>This is paragraph <br> with line break</p>
-<h1>PAGE IS UNDER CONSTRUCTION NOW!</h1>
-
-</body>
-</html>
-
-
-
-
-
-<!-- ADDITIONAL HTML RELATED INFORMATIONS
-
-###################################################################
-Formatting elements were designed to display special types of text:
-
-<b> - Bold text
-<strong> - Important text
-<i> - Italic text
-<em> - Emphasized text
-<mark> - Marked text
-<small> - Small text
-<del> - Deleted text
-<ins> - Inserted text
-<sub> - Subscript text
-<sup> - Superscript text
-
-Example: <p>This is <sup>superscripted</sup> text.</p>
-
-###################################################################
-<div> Tag
-The <div> tag defines a division or a section in an HTML document.
-The <div> element is often used as a container for other HTML elements to style them with CSS
-or to perform certain tasks with JavaScript.
-Example: A section in a document that will have a light blue background color:
-
-<div style="background-color:lightblue">
-  <h3>This is a heading</h3>
-  <p>This is a paragraph.</p>
-</div>    
-
-###################################################################
-HTML Quotation and Citation Elements
-
-<abbr>	- Defines an abbreviation or acronym
-<address> -	Defines contact information for the author/owner of a document
-<bdo>	- Defines the text direction
-<blockquote> -	Defines a section that is quoted from another source
-<cite>	- Defines the title of a work
-<q>	- Defines a short inline quotation
-
-Example: <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
-
-###################################################################
-HTML Styles - CSS
-
-<h1 style="color:blue;">This is a Blue Heading</h1> <- inline CSS
-
-<head>    <-  internal in head for single Web Page
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body {background-color: powderblue;}
-h1   {color: blue; font-family: verdana; font-size: 300%;}
-p    {color: red;}
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
 </style>
-</head>
+<body>
 
-<head>   <- external using .css file which includes styles definition for elements
-  <link rel="stylesheet" href="/html/styles.css">
-</head>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-theme-l1">Logo</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Values</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Clients</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Partners</a>
+  </div>
+</div>
 
-###################################################################
-HTML Links
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Menu</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
+</nav>
 
-<a> - element to define a link
-href - attribute to define the link address
-target - attribute to define where to open the linked document
-<img> - element (inside <a>) to use an image as a link
-id - attribute (id="value") to define bookmarks in a page
-href - attribute (href="#value") to link to the bookmark
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-Example:
-<h2 id="C4">Chapter 4</h2> <- bookmark setup
-<a href="#C4">Jump to Chapter 4</a> <- ussage of the defined bookmark
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
 
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Heading</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div class="w3-third w3-container">
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+    </div>
+  </div>
 
-###################################################################
-IMAGE 
+  <div class="w3-row">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Heading</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div class="w3-third w3-container">
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+    </div>
+  </div>
 
-<img> - element to define an image
-src - attribute to define the URL of the image
-alt - attribute to define an alternate text for an image, if it cannot be displayed
-width and height - HTML attributes to define the size of the image
-width and height - CSS properties to define the size of the image (alternatively)
-float - CSS property to let the image float on left or right side of the text
-<map> - element to define an image-map
-<area> - element to define the clickable areas in the image-map
-<img>'s - element usemap attribute to point to an image-map
-<picture> - element to show different images for different devices
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Heading</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div class="w3-third w3-container">
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+    </div>
+  </div>
 
-Example:
-<a href="default.asp">   <- image as a link
-  <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;border:0;">
-</a>
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a class="w3-button w3-black" href="#">1</a>
+      <a class="w3-button w3-hover-black" href="#">2</a>
+      <a class="w3-button w3-hover-black" href="#">3</a>
+      <a class="w3-button w3-hover-black" href="#">4</a>
+      <a class="w3-button w3-hover-black" href="#">5</a>
+      <a class="w3-button w3-hover-black" href="#">»</a>
+    </div>
+  </div>
 
-###################################################################
-HTML Tables
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <h4>Footer</h4>
+    </div>
 
-<table style="width:100%">
-  <tr>                      <- table row>
-    <th>Firstname</th>      <- table header
-    <th>Lastname</th> 
-    <th>Age</th>
-  </tr>
-  <tr>
-    <td>Jill</td>           <- table data cell
-    <td>Smith</td> 
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>Eve</td>
-    <td>Jackson</td> 
-    <td>94</td>
-  </tr>
-</table>
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer>
 
-###################################################################
-HTML Entities - to display reserved characters
+<!-- END MAIN -->
+</div>
 
-&entity_name; or &#entity_number;
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
 
-&lt; or &#60  <- display a less than sign
-&nbsp         <- non-breaking space
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
 
-	non-breaking space	&nbsp;	&#160;
-<	less than	&lt;	&#60;
->	greater than	&gt;	&#62;
-&	ampersand	&amp;	&#38;
-"	double quotation mark	&quot;	&#34;
-'	single quotation mark (apostrophe)	&apos;	&#39;
-¢	cent	&cent;	&#162;
-£	pound	&pound;	&#163;
-¥	yen	&yen;	&#165;
-€	euro	&euro;	&#8364;
-©	copyright	&copy;	&#169;
-®	registered trademark	&reg;	&#174;
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
 
-###################################################################
-HTML Forms - used to collect user input
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
 
-<input type="submit"> defines a button for submitting the form data to a form-handler.
-The form-handler is typically a server page with a script for processing input data.
-The form-handler is specified in the form's action attribute.
-
-Here are the different input types you can use in HTML:
-
-<input type="button">
-<input type="checkbox">
-<input type="color">
-<input type="date">
-<input type="datetime-local">
-<input type="email">
-<input type="file">
-<input type="hidden">
-<input type="image">
-<input type="month">
-<input type="number">
-<input type="password">
-<input type="radio">
-<input type="range">
-<input type="reset">
-<input type="search">
-<input type="submit">
-<input type="tel">
-<input type="text">
-<input type="time">
-<input type="url">
-<input type="week">
-
-Example:
-
-<form action="/action_page.php">
-  First name:<br>
-  <input type="text" name="firstname" value="Mickey"><br>
-  Last name:<br>
-  <input type="text" name="lastname" value="Mouse"><br><br>
-  <input type="submit" value="Submit">
-</form>
-
--->
-
-
-
-
+</body>
+</html>
