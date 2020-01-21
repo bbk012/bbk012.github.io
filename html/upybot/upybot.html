@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!--Copyright (c) 2019 Bogdan Kowalczyk - MIT License. Uses free template from: https://www.w3schools.com/w3css/w3css_templates.asp -->
+<!-- BBK Web Page Project Page -->
+<html lang="en">
+<title>uPyBot Micro Python Robot Project</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Micro Python Robot Project">
+<meta name="keywords" content="HTML,CSS,JavaScript">
+<meta name="author" content="Bogdan Kowalczyk">
+<!-- temporary excluded by B.K.
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/css/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+-->
+<link rel="stylesheet" href="../../css/w3.css">
+<link rel="stylesheet" href="../../css/w3-theme-black.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' 
+integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+
+
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="../../index.html" class="w3-bar-item w3-button w3-theme-l1" title="Home"> <i class="fas fa-robot" style="font-size:24px"></i> BBK</a>
+    <a href="../about.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+    <a href="../projects.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Projects</a>
+    <a href="../links.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Links</a>
+    <a href="../news.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
+    <a href="../contact.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Contact</a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Menu</b></h4>
+ <a class="w3-bar-item w3-button w3-hover-black" href="../../index.html">Home</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="../about.html">About</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="../projects.html">Projects</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="../links.html">Links</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="../news.html">News</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="../contact.html">Contact</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Empty padding to better arrange topics-->
+  <div class="w3-row w3-padding-large">  
+  </div>
+
+  <div class="w3-row w3-padding-16">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">uPyBot Micro Python Robot Project</h1>
+      <p>This page provides more details about my Micro Python Robot. Additionally there are links provided to its source code on the GitHub
+        and to the short video demos.
+      </p>
+    </div>
+  </div>
+
+  <div id="H1" class="w3-row w3-padding-16">
+    <div class="w3-twothird w3-container">
+      <h1  class="w3-text-teal">uPyBot Demos</h1>
+      
+      <p> Those two demos show uPyBot in action. There is very simple script developed in Micro Python which executes "random walk"
+        program demonstrated by the two videos. uPyBot makes random move and detects obstacles.
+        Both videos are about 20 seconds long.
+      </p>
+       
+    </div>
+
+    <div class="w3-third w3-container">
+      <a href="https://youtu.be/Ddpdjs9bJBg">
+        <img src="../../img/upybot/upybot.jpg" alt="uPyBot video from the YouTube (Demo 1)" style="width:100%;max-width:100px">
+      </a>
+      <a href="https://youtu.be/Ddpdjs9bJBg">
+        <p class="w3-tiny"> <i class="fab fa-youtube"></i> uPyBot "random walk" demo 1</p>
+      </a>
+    </div>
+
+    <div class="w3-twothird w3-container">
+      <a href="https://github.com/bbk012/uPyBot"> <h1  class="w3-text-teal">uPyBot GutHub Repository</h1> </a>
+       
+      <p> My uPyBot robot Micro Python source code on the GitHub is available  
+        <a href="https://github.com/bbk012/uPyBot">here <i class='fab fa-github'></i> </a>. 
+
+      </p>   
+    </div>
+
+    <div class="w3-third w3-container">
+      <a href="https://youtu.be/syMR8AxNTg4">
+        <img src="../../img/upybot/upybot.jpg" alt="uPyBot video from the YouTube (Demo 2)" style="width:100%;max-width:100px">
+      </a>
+      <a href="https://youtu.be/syMR8AxNTg4">
+        <p class="w3-tiny"> <i class="fab fa-youtube"></i> uPyBot "random walk" demo 2</p>
+      </a>
+    </div>
+      
+  </div>
+
+  <div id="H2" class="w3-row w3-padding-16">
+    <div class="w3-twothird w3-container">
+      <h1  class="w3-text-teal">uPyBot Hardware Overview </h1>
+      <p> 
+        uPyBot is controlled by Micro Python Hardware Board (named pyboard)  which is running Micro Python script.
+        Both Micro Python as well as Micro Python Board are very well documented on the <a href="http://micropython.org">Micro Python Web Page (micropython.org)</a>.
+        uPyBot is assembled from off the shelf components (see <a href="https://botland.com.pl/en/">Botland </a>) 
+        supported by a small interface board (assembled myself) which handle some additional required electronic components.<br>
+        <p>
+        Schematic of the uPyBot robot is shown on the pictures.
+        Four NiMH rechargeable batteries through power on/off switch and fuse provide power to the DC/DC step-up/step-down converter which
+        generates 5[V] stabilized output used to power the pyboard (version 1.1) and all other components. The L298N based motor driver is used to 
+        control left and right motor. Movement of the left and the right wheel is detected by the two independent encoders WSR-08834. 
+        The HC-SR04 ultrasonic sensor is used to detect obstacles. Interface board holds also the CR2025 battery used to provide power for 
+        the pyboard Real Time Clock to keep it working when main power is off. There is also simple buzzer connected using the 2N4401 transistor 
+        so pyboard can turn on and off a beep signal. There is also possibility to connect PIR movement detection sensor (planned for the future). 
+        This robot can of course be extended and additional components and sensor can be added to extend its functionality if required.
+      </p>
+
+      </p>
+    </div>
+    
+    <div class="w3-third w3-container">
+      <a href="../../img/upybot/schematic.jpg" target="_blank">
+          <img src="../../img/upybot/schematic.jpg" alt="uPyBot schematic" style="width:100%;max-width:300px">
+      </a>
+      <a href="../../img/upybot/schematic.jpg" target="_blank">
+          <p class="w3-tiny"> uPyBot Schematic Diagram</p>
+      </a>      
+    </div>
+
+
+  </div>
+
+  <div id="H2" class="w3-row w3-padding-16">
+    <div class="w3-twothird w3-container">
+      <h1  class="w3-text-teal">uPyBot Software Overview </h1>
+      <p> 
+        I developed very simple script in Micro Python (about 340 lines of Python code) to control uPyBot robot.
+        It includes classes which correspond to uPyBot key components: Beeper, Encoder, Motor, UltraSonicSensor, and uPyBot itself.
+        Those classes form a basic structure of system and implement all methods required to control this robot.
+        Based on those classes finally 10 lines of Python code execute "random walk" program through an infinite loop.
+        Using those basic classes and their methods far more complicated uPyBot robot control algorithms can be developed.
+      </p>
+    </div>
+    
+    <div class="w3-third w3-container">
+      <a href="../../img/upybot/schematicblk.jpg" target="_blank">
+          <img src="../../img/upybot/schematicblk.jpg" alt="uPyBot schematic block diagram" style="width:100%;max-width:300px">
+      </a>
+      <a href="../../img/upybot/schematicblk.jpg" target="_blank">
+          <p class="w3-tiny"> uPyBot Schematic Block Diagram</p>
+      </a>      
+    </div>
+  </div>
+  
+
+  
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a class="w3-button w3-black" href="../projects.html#H3"><<</a>
+    </div>
+  </div>
+
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <h4><i class="far fa-copyright"></i> 2019 Bogdan Kowalczyk</h4>
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+      <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 		    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>
