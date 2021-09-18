@@ -73,8 +73,8 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   <div class="w3-row w3-padding-16">
     <div class="w3-twothird w3-container">
       <h1 class="w3-text-teal">uPyBot Micro Python Robot Project</h1>
-      <p>This page provides more details about my Micro Python Robot. Additionally there are links provided to its source code on the GitHub
-        and to the short video demos.
+      <p>This page provides more details about my Micro Python Robot. 
+        Additionally, there are links provided to its source code on GitHub and the short video demos.
       </p>
     </div>
   </div>
@@ -83,8 +83,8 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <div class="w3-twothird w3-container">
       <h1  class="w3-text-teal">uPyBot Demos</h1>
       
-      <p> Those two demos show uPyBot in action. There is very simple script developed in Micro Python which executes "random walk"
-        program demonstrated by the two videos. uPyBot makes random move and detects obstacles.
+      <p> Those two demos show uPyBot in action. There is a very simple script developed in Micro Python which executes 
+        "random walk" program demonstrated by the two videos. uPyBot makes a random move and detects obstacles.
         Both videos are about 20 seconds long.
       </p>
        
@@ -102,7 +102,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <div class="w3-twothird w3-container">
       <a href="https://github.com/bbk012/uPyBot"> <h1  class="w3-text-teal">uPyBot GutHub Repository</h1> </a>
        
-      <p> My uPyBot robot Micro Python source code on the GitHub is available  
+      <p> My uPyBot robot Micro Python source code on GitHub is available  
         <a href="https://github.com/bbk012/uPyBot">here <i class='fab fa-github'></i> </a>. 
 
       </p>   
@@ -125,17 +125,19 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
       <p> 
         uPyBot is controlled by Micro Python Hardware Board (named pyboard)  which is running Micro Python script.
         Both Micro Python as well as Micro Python Board are very well documented on the <a href="http://micropython.org">Micro Python Web Page (micropython.org)</a>.
-        uPyBot is assembled from off the shelf components (see <a href="https://botland.com.pl/en/">Botland </a>) 
-        supported by a small interface board (assembled myself) which handle some additional required electronic components.<br>
+        uPyBot is assembled from off-the-shelf components (see <a href="https://botland.com.pl/en/">Botland </a>) 
+        supported by a small interface board (assembled by myself) which handles some additional required electronic components.<br>
         <p>
-        Schematic of the uPyBot robot is shown on the pictures.
-        Four NiMH rechargeable batteries through power on/off switch and fuse provide power to the DC/DC step-up/step-down converter which
-        generates 5[V] stabilized output used to power the pyboard (version 1.1) and all other components. The L298N based motor driver is used to 
-        control left and right motor. Movement of the left and the right wheel is detected by the two independent encoders WSR-08834. 
-        The HC-SR04 ultrasonic sensor is used to detect obstacles. Interface board holds also the CR2025 battery used to provide power for 
-        the pyboard Real Time Clock to keep it working when main power is off. There is also simple buzzer connected using the 2N4401 transistor 
-        so pyboard can turn on and off a beep signal. There is also possibility to connect PIR movement detection sensor (planned for the future). 
-        This robot can of course be extended and additional components and sensor can be added to extend its functionality if required.
+          A schematic of the uPyBot robot is shown in the pictures.
+          Four NiMH rechargeable batteries through power on/off switch and fuse provide power to the DC/DC 
+          step-up/step-down converter which generates 5[V] stabilized output used to power the pyboard (version 1.1) 
+          and all other components. The L298N based motor driver is used to control the left and right motor. 
+          Movement of the left and the right wheel is detected by the two independent encoders WSR-08834. 
+          The HC-SR04 ultrasonic sensor is used to detect obstacles. The interface board holds also the CR2025 battery 
+          used to provide power for the pyboard Real Time Clock to keep it working when the main power is off. 
+          There is also a simple buzzer connected using the 2N4401 transistor so pyboard can turn on and off a beep signal. There is also a possibility to connect PIR movement detection sensor (planned for the future). 
+          This robot can of course be extended and additional components and sensors can be added to extend its 
+          functionality if required.
       </p>
 
       </p>
@@ -157,11 +159,12 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <div class="w3-twothird w3-container">
       <h1  class="w3-text-teal">uPyBot Software Overview </h1>
       <p> 
-        I developed very simple script in Micro Python (about 340 lines of Python code) to control uPyBot robot.
-        It includes classes which correspond to uPyBot key components: Beeper, Encoder, Motor, UltraSonicSensor, and uPyBot itself.
-        Those classes form a basic structure of system and implement all methods required to control this robot.
-        Based on those classes finally 10 lines of Python code execute "random walk" program through an infinite loop.
-        Using those basic classes and their methods far more complicated uPyBot robot control algorithms can be developed.
+        I developed a very simple script in Micro Python (about 340 lines of Python code) to control uPyBot robot.
+        It includes classes that correspond to uPyBot key components: Beeper, Encoder, Motor, UltraSonicSensor, 
+        and uPyBot itself. Those classes form a basic structure of the system and implement all methods required 
+        to control this robot. Based on those classes finally, 10 lines of Python code execute "random walk" program 
+        through an infinite loop. Using those basic classes and their methods far more complicated uPyBot robot 
+        control algorithms can be developed.
       </p>
     </div>
     

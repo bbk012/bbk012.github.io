@@ -104,8 +104,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <div id="H2" class="w3-row w3-padding-16">
         <div class="w3-twothird w3-container">
             <h1   class="w3-text-teal">Block Diagram</h1> </a>
-            <p> This is hand made Wall-e Block Diagram. I will keep it here until I manage to rewrite it with a computer tool.
-                It shows key Wall-e's components and how they functionally interact with the LPC2378 micro-controller (uC).
+            <p> This is handwritten Wall-e Block Diagram. I will keep it here until I manage to rewrite it with 
+                a computer tool. It shows key Wall-e's components and how they functionally interact with 
+                the LPC2378 microcontroller (uC).
             </p>
         </div>
 
@@ -122,22 +123,22 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <div class="w3-row w3-padding-16">
         <div class="w3-twothird w3-container">
             <h3 class="w3-text-teal">Block Diagram Description</h3>
-            <p> LPC2378 uC is a heart of the system. It controls all the peripherals which are either on the OLIMEX LPC2378-STK development board
-            or on the additional self developed interface boards. There are 3 different NiNH battery packs which power the system one which is used to power
-            motors, another one which is used to power servos and the third one which provides power to all electronics. PVG612 ICs (solid state relays) are used 
-            to turn on and off power supply. This way LPC2378 uC has full power supply control and even can turn off and back turn on itself through its RTC Alarm output
-            (as long as RTC battery is working). OLIMEX LPC2378-STK keypad (two buttons and joystick) is used to control LCD screen. Red LED on the STK board 
-            is used as a heart bit indicator. MMA7260Q accelerometer which is available on the STK board is used as tilt detector to stop Wall-e when it starts to climb on obstacles.
+            <p> LPC2378 uC is the heart of the system. It controls all the peripherals which are either on the OLIMEX LPC2378-STK development board
+            or on the additional self-developed interface boards. There are 3 different NiNH battery packs that power the system one which is used to power
+            motors, another one which is used to power servos, and the third one which provides power to all electronics. PVG612 ICs (solid-state relays) are used 
+            to turn on and off the power supply. This way LPC2378 uC has full power supply control and even can turn off and back turn on itself through its RTC Alarm output
+            (as long as RTC battery is working). OLIMEX LPC2378-STK keypad (two buttons and joystick) is used to control LCD screen. A red LED on the STK board 
+            is used as a heart-bit indicator. MMA7260Q accelerometer which is available on the STK board is used as a tilt detector to stop Wall-e when it starts to climb on obstacles.
             Left and right track motors are controlled by L298 IC motor driver. LPC2378 uC can control motor speed (PWM signal) as well as rotation direction (very standard L298 application).
-            PVG612 IC is used to enable/disable motors' power. Because there is not encoder in the Tri-Track Chassis Kit I mounted internally a Transmissive Optical Sensor
+            PVG612 IC is used to enable/disable motors' power. Because there is no encoder in the Tri-Track Chassis Kit I mounted internally a Transmissive Optical Sensor
             for both left and right track which counts track sprocket tooths passing through it. Powering of those sensors is also controlled (turned on or off) by uC.
             Dynamic buzzer KPX 612 05B is used to generate call signals. LPC2378 uC PWM outputs control head as well as left and right arm servos. Servos power supply
-            same like in the case of other subsystem is fully controlled using solid state relay PVG612 ICs.
+            same as in the case of other subsystem is fully controlled using solid-state relay PVG612 ICs.
             8-channels Analog to Digital (A/D) converter MCP3208 on the main interface board is used to monitor every battery pack voltage level
-            as well as to condition Angular Rate Sensor (ARS) EWTS62NB, front light phototransistor and day-light back photoresistor sensors. 
+            as well as to condition Angular Rate Sensor (ARS) EWTS62NB, front light phototransistor, and day-light back photoresistor sensors. 
             Infrared distance detector GP2D12 is also connected to this A/D converter and its power supply is fully controlled by the uC.
             HC-SR04 Ultrasonic (US) distance detector is connected to uC ports directly. EasyVR 3 the multi-purpose speech recognition module is connected to one of the LPC2378
-            serial links. There is also another serial link used for remote RS-232 serial interface.  
+            serial links. There is also another serial link used for the remote RS-232 serial interface.  
             </p>
         </div>
     </div>
@@ -145,7 +146,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <div id="H3" class="w3-row w3-padding-16">
         <div class="w3-twothird w3-container">
           <h1   class="w3-text-teal">Software</h1> </a>
-          <p> This is Wall-e Software Architecture Diagram described in more details below.</p>
+          <p> This is Wall-e Software Architecture Diagram described in more detail below.</p>
         </div>
 
         <div class="w3-third w3-container">
@@ -163,23 +164,23 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
           <h3 class="w3-text-teal">Software Architecture Description</h3>
           <p> 
               Wall-e software has layer architecture. Source code file names have prefix corresponding to the particular layer to simplify code navigation.
-              For example all operating system files both *.c and *.h have os_ prefix.
+              For example, all operating system files both *.c and *.h have os_ prefix.
               The lowest layer is the one which is directly dealing with hardware denoted with hw_ prefix. Its functions directly manipulate particular hardware components.
-              Upon that layer there is control layer denoted ctr_ which provides more abstract level access to the underlying devices.
-              Operating system layer marked os_ provides all uC/OS-II real time kernel services like tasks, mutexes, queues etc.
-              In order to use object oriented programming (OOP) there is additional C++ based wrapper created. In this way real time kernel services are made
-              available through OOP mechanisms like inheritance etc. Because in the system there are some supportive real time tasks (which are not abstracted
-              to the managers level) tsk_ layer is used to cover this. The key Wall-e real time communication and multitasking management is realized using
+              Upon that layer, there is a control layer denoted ctr_ which provides more abstract level access to the underlying devices.
+              Operating system layer marked os_ provides all uC/OS-II real-time kernel services like tasks, mutexes, queues etc.
+              In order to use object-oriented programming (OOP) there is additional C++ based wrapper created. In this way, real-time kernel services are made
+              available through OOP mechanisms like inheritance etc. Because in the system there are some supportive real-time tasks (which are not abstracted
+              to the managers level) tsk_ layer is used to cover this. The key Wall-e real time communication and multitasking management are realized using
               publish/subscribe concept. This paradigm is implemented through publish subscribe middleware (denoted mw_) and managers (denoted mng_).
               In the publish/subscribe paradigm communicating entities are loosely coupled. Publishers do not know their subscribers they publish a notifier
-              (message) which can be consume by none or many subscribers. This creates a lot of flexibility - adding additional subscriber for a particular
+              (message) that can be consumed by none or many subscribers. This creates a lot of flexibility - adding additional subscribers for a particular
               notifier does not introduce any modification in the code of existing publishers and subscribers.
               In Wall-e system the highest level in the software are managers (independent tasks) which can be either a publisher or a subscriber or both.
               Managers are denoted with mng_ prefix. Notifier Dispatcher is driven by the highest priority tasks. It checks every publisher for any published notifier
-              and delivers it to all its subscribers. Subscribing can be dynamic at any moment subscriber can unsubscribe to receive any particular notifier.
-              Notifiers are dynamically allocated on the heap, and reference count is used to keep them available as long as they are referenced.
+              and delivers it to all its subscribers. Subscribing can be dynamic at any moment a subscriber can unsubscribe to not receive any particular notifier.
+              Notifiers are dynamically allocated on the heap, and the reference count is used keeping them available as long as they are referenced.
               Publish/subscribe middleware is implemented using C++ templates. Because in the system standard C and C++ libraries are not used 
-              (because of their size but also to have full control upon some functions like malloc, free etc.) there is system level
+              (because of their size but also to have full control upon some functions like malloc, free etc.) there is system-level
               library denoted lib_ which contains functions used by all other software components.  
           </p>
         </div>
@@ -190,9 +191,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
             <h3   class="w3-text-teal">Obstacle Avoidance and Path Planning</h3>
             <p> Wall-e is using 2-dimensional (2D) occupancy grid 3 x 3 cells wide for its obstacle avoidance (cell dimension is 30[cm] x 30[cm]).
                     Whenever Wall-e detects an obstacle on its way either through infrared distance detector GP2D12 or using ultrasonic distance detector HC-SR04 or both
-                    it stops, scans surroundings, assigns obstacles to the occupancy cells and next determine path forward the closest one to its current move direction.
-                    This simple (naive) way it founds a path between obstacles following sense-plan-act paradigm. When two equal paths are determined, like on the picture, 
-                    one is selected using random number generator.
+                    it stops, scans surroundings, assigns obstacles to the occupancy cells and next determines the path forward the closest one to its current movement direction.
+                    This simple (naive) way it founds a path between obstacles following the sense-plan-act paradigm. When two equal paths are determined, like on the picture, 
+                    one is selected using a random number generator.
             </p>
         </div>
         <div class="w3-third w3-container">
@@ -208,19 +209,19 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <div id="H5" class="w3-row w3-padding-16">
         <div class="w3-twothird w3-container">
             <h3 class="w3-text-teal">Wall-e Programs</h3>
-            <p> Currently Wall-e is implementing 3 simple programs. Two of them named 'Test' and 'Enjoy' are implemented using Wall-e Simple Sequencer.
-                    This sequencer is a kind of very primitive interpreter but allows to assembly simple move sequencies without the need of C/C++ programming.
+            <p> Currently, Wall-e is implementing 3 simple programs. Two of them named 'Test' and 'Enjoy' are implemented using Wall-e Simple Sequencer.
+                    This sequencer is a kind of very primitive interpreter but allows to assembly simple move sequences without the need for C/C++ programming.
                     I think better would be to port any simple interpreter like TCL or FORTH. 
                     I considered <a href="https://github.com/zserge/partcl">ParTcl</a> a simple TCL interpreter by Serge Zaitsev
-                    but finally stayed with something even simpler. In the future however (having a bit more time) would be good to have something better embedded in the robot
+                    but finally stayed with something even simpler. In the future, however (having a bit more time) would be good to have something better embedded in the robot
                     for its more flexible and easier/quicker programming.
             </p>
             <p>
-                    The third program 'Bath' is the main one implemented in C++. This is a state machine which executes 'get my wife out of the bath' program.
-                    It wakes-up Wall-e at nights who then checks if there is night indeed and scans surroundings to determine a light source 
+                    The third program 'Bath' is the main one implemented in C++. This is a state machine that executes the 'get my wife out of the bath' program.
+                    It wakes up Wall-e at night who then checks if there is night indeed and scans surroundings to determine a light source 
                     (which he assumes is the one from the bath) and starts moving towards it. If on its way to the bath Wall-e encounters any obstacles, he makes attempts
-                    to bypass them. When finally there is not possibility to move he assumes bath doors are there so he starts the call signal. After couple of call signals 
-                    issued Wall-e moves aside (to avoid hitting by the opened door) and goes to sleep. This program <a href="https://youtu.be/0yo_ZbzMGnw">demo</a> you can find on the 
+                    to bypass them. When finally there is no possibility to move he assumes bath doors are there so he starts the call signal. After couple of call signals 
+                    issued Wall-e moves aside (to avoid hitting by the opened door) and goes to sleep. This program <a href="https://youtu.be/0yo_ZbzMGnw">demo</a> you can find on  
                     YouTube as well as <a href="https://youtu.be/vpOA1GR5Tuw">the one</a> which demonstrates voice control of the robot.
             </p>
         </div>
