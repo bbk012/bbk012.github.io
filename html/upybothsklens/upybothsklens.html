@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!--Copyright (c) 2019 Bogdan Kowalczyk - MIT License. Uses free template from: https://www.w3schools.com/w3css/w3css_templates.asp -->
+<!-- BBK Web Page Project Page -->
+<html lang="en">
+<title>uPyBot Micro Python Robot Project</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Micro Python Robot Project">
+<meta name="keywords" content="HTML,CSS,JavaScript">
+<meta name="author" content="Bogdan Kowalczyk">
+<!-- temporary excluded by B.K.
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/css/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+-->
+<link rel="stylesheet" href="../../css/w3.css">
+<link rel="stylesheet" href="../../css/w3-theme-black.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' 
+integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+
+
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="../../index.html" class="w3-bar-item w3-button w3-theme-l1" title="Home"> <i class="fas fa-robot" style="font-size:24px"></i> BBK</a>
+    <a href="../about.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+    <a href="../projects.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Projects</a>
+    <a href="../links.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Links</a>
+    <a href="../news.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
+    <a href="../contact.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Contact</a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Menu</b></h4>
+ <a class="w3-bar-item w3-button w3-hover-black" href="../../index.html">Home</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="../about.html">About</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="../projects.html">Projects</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="../links.html">Links</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="../news.html">News</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="../contact.html">Contact</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Empty padding to better arrange topics-->
+  <div class="w3-row w3-padding-large">  
+  </div>
+
+  <div class="w3-row w3-padding-16">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">uPyBot with HuskyLens AI Camera Project</h1>
+      <p>This page provides more details of how I connected HuskyLens AI camera into my uPyBot. 
+        Additionally, there are links provided to the source code on GitHub and the short video demo.
+      </p>
+    </div>
+  </div>
+
+  <div id="H1" class="w3-row w3-padding-16">
+    <div class="w3-twothird w3-container">
+      <h1  class="w3-text-teal">uPyBot with HuskyLens AI Camera Demo</h1>
+      
+      <p> This YouTube demo shows uPyBot hello greeting (quick left-right move with a beep) 
+        when on its attempt to move forward uPyBot recognize my face.
+      </p>   
+    </div>
+
+    <div class="w3-third w3-container">
+      <a href="https://youtu.be/S1suBfLBu4U">
+        <img src="../../img/upybothsklens/upybothsklens.jpg" alt="uPyBot with HuskyLens AI camera" style="width:100%;max-width:100px">
+      </a>
+      <a href="https://youtu.be/S1suBfLBu4U">
+        <p class="w3-tiny"> <i class="fab fa-youtube"></i> uPyBot with HuskyLens AI camera</p>
+      </a>  
+    </div>
+
+    <div class="w3-twothird w3-container">
+      <a href="https://github.com/bbk012/uPyBot"> <h1  class="w3-text-teal">uPyBot GutHub Repository</h1> </a>
+       
+      <p> GitHub Micro Python source code to control my uPyBot as well as HuskyLens AI camera is available  
+        <a href="https://github.com/bbk012/uPyBot">here <i class='fab fa-github'></i> </a>. 
+
+      </p>   
+    </div>    
+  </div>
+
+  <div id="H2" class="w3-row w3-padding-16">
+    <div class="w3-twothird w3-container">
+      <h1  class="w3-text-teal">uPyBot and HuskyLens AI Camera<br> Hardware Overview </h1>
+      <p> 
+        uPyBot is controlled by the Micro Python Hardware Board (named pyboard)  which is running Micro Python script.
+        Both Micro Python as well as Micro Python Board are very well documented on the <a href="http://micropython.org">Micro Python Web Page (micropython.org)</a>.
+        uPyBot is assembled from off-the-shelf components (see <a href="https://botland.com.pl/en/">Botland </a>) 
+        supported by a small interface board (assembled by myself) which handles some additional required electronic components.<br>
+        <p>
+          HuskyLens PRO AI camera is added to uPyBot using pyboard serial interface (UART 3). 
+          There are 4 cables required to interface to the HuskyLens AI camera. 
+          Two are used to power the camera (pyboard pins V+ 5[V], GND), and two others provide serial link TxD and RxD 
+          as shown on the schematic diagram. HuskyLens camera TxD line is connected to pybard pin Y10 (RxD) and 
+          camera RxD line is connected to pyboard pin Y9 (TxD). 
+      </p>
+
+      </p>
+    </div>
+    
+    <div class="w3-third w3-container">
+      <a href="../../img/upybothsklens/schematic.jpg" target="_blank">
+          <img src="../../img/upybothsklens/schematic.jpg" alt="Schematic of uPyBot with HuskyLens AI Camera" style="width:100%;max-width:300px">
+      </a>
+      <a href="../../img/upybothsklens/schematic.jpg" target="_blank">
+          <p class="w3-tiny">Schematic of uByBot with HuskyLens AI Camera Added</p>
+      </a>      
+    </div>
+  </div>
+
+  <div id="H2" class="w3-row w3-padding-16">
+    <div class="w3-twothird w3-container">
+      <h1  class="w3-text-teal">uPyBot and HuskyLens AI Camera<br> Software Overview </h1>
+      <p> 
+        I have extended original uPyBot script with HuskyLens related functions. 
+        Those functions use huskylensPythonLibrary.py library taken from the 
+        <a href="https://www.pcbway.com/project/shareproject/Interfacing_Huskylens_with_Raspberry_Pi_Pico_1.html">Interfacing Huskylens with Raspberry Pi Pico</a> web page. 
+        I have had to modify one line in the library to let it uses pyboard UART3 interface.
+        uPyBot class is extended to have HuskyLens camera as its member and
+        next wait_until_move_done() method is modified to check if FACE ID 1 is recognized by the camera. 
+        HuskyLens camera has been taught my face which is identified as FACE ID 1. 
+        When uPyBot detects my face during its forward movement it stops and runs a greeting procedure turn_for_hello().
+        This procedure makes five quick left and right movements with a beep.
+        After greeting uPyBot continues his random walk procedure until it recognizes FACE ID 1 again. 
+        To avoid blocking the robot with another greeting there is a timeout introduced which requires some time 
+        (currently 15 seconds) to expire between consecutive face recognitions.
+        The original random walk Micro Python script was modified to eliminate
+        rapid movement changes (like a motor hard stop) by adding 200[ms] delays between motor commands 
+        to not overload the power supply which generated HuskyLens camera resets. 
+      </p>
+    </div>
+  </div>
+   
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a class="w3-button w3-black" href="../projects.html#H4"><<</a>
+    </div>
+  </div>
+
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <h4><i class="far fa-copyright"></i> 2019 Bogdan Kowalczyk</h4>
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+      <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 		    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>
